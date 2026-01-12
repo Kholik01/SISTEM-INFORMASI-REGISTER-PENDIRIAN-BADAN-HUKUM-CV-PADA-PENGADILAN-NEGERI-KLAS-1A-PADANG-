@@ -1,0 +1,5 @@
+[project]
+name = "PySide Widgets Project"
+
+[tool.pyside6-project]
+files = ["DataBase.py", "Data_Pemilik.ui", "data_cv.ui", "data_notaris.ui", "data_petugas.ui", "data_register.ui", "data_register_cv.ui", "form.ui", "logika_data_cv.py", "logika_data_notaris.py", "logika_data_pemilik.py", "logika_data_petugas.py", "logika_data_register.py", "logika_data_register_cv.py", "logika_menu_laporan.py", "main.py", "menu_laporan.ui"]

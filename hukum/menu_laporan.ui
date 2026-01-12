@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Menu Laporan</string>
+  </property>
+  <property name="styleSheet">
+   <string>
+QWidget {
+    background-color: #f2f2f2;
+    font-family: Arial;
+    font-size: 10pt;
+    color: #000000;
+}
+
+QGroupBox {
+    background-color: #ffffff;
+    border: 1px solid #b0b0b0;
+    border-radius: 4px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding: 0 8px;
+}
+
+QLabel { color: #000000; }
+
+QPushButton {
+    background-color: #e6e6e6;
+    border: 1px solid #8a8a8a;
+    border-radius: 3px;
+    padding: 6px 16px;
+    min-height: 28px;
+    font-weight: bold;
+}
+
+QPushButton:hover { background-color: #dcdcdc; }
+QPushButton:pressed { background-color: #cfcfcf; }
+
+QComboBox {
+    background-color: #ffffff;
+    border: 1px solid #8a8a8a;
+    padding: 4px 6px;
+    min-height: 26px;
+}
+
+QRadioButton { spacing: 6px; }
+   </string>
+  </property>
+  <layout class="QVBoxLayout">
+   <item>
+    <widget class="QFrame" name="frame">
+     <property name="styleSheet">
+      <string>background-color:#e0e0e0;</string>
+     </property>
+     <layout class="QHBoxLayout">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="minimumSize">
+         <size>
+          <width>90</width>
+          <height>90</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>LOGO</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>
+APLIKASI SISTEM INFORMASI REGISTER CV
+PENGADILAN NEGERI KLAS IA PADANG
+BERBASIS JAVA
+Jl. Khatib Sulaiman No.80 Padang
+         </string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout">
+     <item>
+      <widget class="QGroupBox" name="groupBox">
+       <property name="title">
+        <string>CV, PEMILIK, NOTARIS &amp; REGISTER</string>
+       </property>
+       <layout class="QGridLayout">
+        <item row="0" column="1">
+         <widget class="QPushButton" name="btnCetakCV">
+          <property name="text">
+           <string>CETAK</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>BULAN</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QRadioButton" name="rbCV">
+          <property name="text">
+           <string>LAPORAN KESELURUHAN</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QComboBox" name="cbBulan"/>
+        </item>
+        <item row="2" column="1">
+         <widget class="QComboBox" name="cbTahun"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>TAHUN</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="groupBox">
+       <property name="title">
+        <string>LAPORAN REGISTER PERTAHUN, PERBULAN, PERHARI</string>
+       </property>
+       <layout class="QGridLayout">
+        <item row="0" column="0">
+         <widget class="QRadioButton" name="rbPerHari">
+          <property name="text">
+           <string>PERHARI</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QComboBox" name="cbBulan2"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QRadioButton" name="rbPerBulan">
+          <property name="text">
+           <string>PERBULAN</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QComboBox" name="cbBulan3"/>
+        </item>
+        <item row="1" column="2">
+         <widget class="QComboBox" name="cbTahun2"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QRadioButton" name="rbPerTahun">
+          <property name="text">
+           <string>PERTAHUN</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QComboBox" name="cbTahun3"/>
+        </item>
+        <item row="2" column="2">
+         <widget class="QPushButton" name="btnLihatTahun">
+          <property name="text">
+           <string>LIHAT LAPORAN</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>LAPORAN STATUS CV</string>
+     </property>
+     <layout class="QHBoxLayout">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>PILIH LAPORAN</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTableWidget" name="tableWidget"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnCetakStatus">
+        <property name="text">
+         <string>CETAK</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

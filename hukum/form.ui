@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>main</class>
+ <widget class="QMainWindow" name="main">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>main</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuMenu">
+    <property name="title">
+     <string>Menu</string>
+    </property>
+    <addaction name="actionData_Pemilik"/>
+    <addaction name="actionData_CV_2"/>
+    <addaction name="actionData_Register"/>
+    <addaction name="actionData_Register_CV"/>
+    <addaction name="actionMenu_Laporan"/>
+    <addaction name="actionData_Notaris"/>
+    <addaction name="actionData_Petugas"/>
+   </widget>
+   <addaction name="menuMenu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionData_Pemilik">
+   <property name="text">
+    <string>Data Pemilik</string>
+   </property>
+  </action>
+  <action name="actionData_CV">
+   <property name="text">
+    <string>Data Notaris</string>
+   </property>
+  </action>
+  <action name="actionData_CV_2">
+   <property name="text">
+    <string>Data CV</string>
+   </property>
+  </action>
+  <action name="actionData_Register">
+   <property name="text">
+    <string>Data Register</string>
+   </property>
+  </action>
+  <action name="actionData_Register_CV">
+   <property name="text">
+    <string>Data Register CV</string>
+   </property>
+  </action>
+  <action name="actionMenu_Laporan">
+   <property name="text">
+    <string>Menu Laporan</string>
+   </property>
+  </action>
+  <action name="actionData_Notaris">
+   <property name="text">
+    <string>Data Notaris</string>
+   </property>
+  </action>
+  <action name="actionData_Petugas">
+   <property name="text">
+    <string>Data Petugas</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

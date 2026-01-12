@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>680</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Data CV</string>
+  </property>
+
+  <!-- ================= STYLE FINAL ================= -->
+  <property name="styleSheet">
+   <string>
+/* ================= GLOBAL ================= */
+QWidget {
+    background-color: #f2f2f2;
+    font-family: Arial;
+    font-size: 11px;
+    color: #000000;
+}
+
+/* ================= HEADER ================= */
+QLabel#lblJudul {
+    color: #000000;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+QLabel#lblSub {
+    color: #000000;
+    font-size: 12px;
+}
+
+/* ================= LABEL ================= */
+QLabel {
+    color: #000000;
+    font-weight: bold;
+}
+
+/* ================= GROUP BOX ================= */
+QGroupBox {
+    background-color: #ffffff;
+    border: 1px solid #b0b0b0;
+    border-radius: 4px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 0 10px;
+}
+
+/* ================= INPUT ================= */
+QLineEdit, QTextEdit, QDateEdit {
+    background-color: #ffffff;
+    border: 1px solid #a0a0a0;
+    border-radius: 4px;
+    padding: 4px;
+    color: #000000;
+}
+
+/* ================= BUTTON ================= */
+QPushButton {
+    background-color: #e6e6e6;
+    border: 1px solid #8a8a8a;
+    border-radius: 4px;
+    padding: 6px 14px;
+    font-weight: bold;
+    color: #000000;
+}
+
+QPushButton:hover {
+    background-color: #dcdcdc;
+}
+
+QPushButton:pressed {
+    background-color: #cfcfcf;
+}
+
+/* ================= TABLE ================= */
+QTableWidget {
+    background-color: #ffffff;
+    gridline-color: #c0c0c0;
+}
+
+QHeaderView::section {
+    background-color: #e0e0e0;
+    border: 1px solid #b0b0b0;
+    padding: 4px;
+    font-weight: bold;
+}
+   </string>
+  </property>
+
+  <!-- ================= LAYOUT ================= -->
+  <layout class="QVBoxLayout">
+
+   <!-- HEADER -->
+   <item>
+    <layout class="QHBoxLayout">
+     <item>
+      <widget class="QLabel" name="lblJumlah">
+       <property name="maximumSize">
+        <size>
+         <width>80</width>
+         <height>80</height>
+        </size>
+       </property>
+       <property name="pixmap">
+        <pixmap>:/logo/logo.png</pixmap>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QVBoxLayout">
+       <item>
+        <widget class="QLabel" name="lblJudul">
+         <property name="text">
+          <string>APLIKASI SISTEM INFORMASI REGISTER CV</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="lblSub">
+         <property name="text">
+          <string>PENGADILAN NEGERI KELAS IA PADANG - BERBASIS JAVA</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+
+   <!-- FORM -->
+   <item>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>ENTRY DATA CV</string>
+     </property>
+     <layout class="QGridLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="lblJumlah">
+        <property name="text"><string>Kode CV</string></property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="txtKodeCV"/>
+      </item>
+
+      <item row="0" column="2">
+       <widget class="QLabel" name="lblJumlah">
+        <property name="text"><string>Modal</string></property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QLineEdit" name="txtModal"/>
+      </item>
+
+      <item row="1" column="0">
+       <widget class="QLabel" name="lblJumlah">
+        <property name="text"><string>Nama CV</string></property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="txtNamaCV"/>
+      </item>
+
+      <item row="1" column="2">
+       <widget class="QLabel" name="lblJumlah">
+        <property name="text"><string>Tanggal Berdiri</string></property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QDateEdit" name="dateBerdiri">
+        <property name="calendarPopup">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+
+      <item row="2" column="0">
+       <widget class="QLabel" name="lblJumlah">
+        <property name="text"><string>Alamat CV</string></property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QTextEdit" name="txtAlamatCV"/>
+      </item>
+
+      <item row="2" column="2">
+       <widget class="QLabel" name="lblJumlah">
+        <property name="text"><string>Jenis Usaha</string></property>
+       </widget>
+      </item>
+      <item row="2" column="3">
+       <widget class="QTextEdit" name="txtJenisUsaha"/>
+      </item>
+     </layout>
+    </widget>
+   </item>
+
+   <!-- BUTTON -->
+   <item>
+    <layout class="QHBoxLayout">
+     <item><widget class="QPushButton" name="btnSimpan"><property name="text"><string>Simpan</string></property></widget></item>
+     <item><widget class="QPushButton" name="btnUbah"><property name="text"><string>Ubah</string></property></widget></item>
+     <item><widget class="QPushButton" name="btnHapus"><property name="text"><string>Hapus</string></property></widget></item>
+     <item><widget class="QPushButton" name="btnBersih"><property name="text"><string>Bersih Teks</string></property></widget></item>
+     <item><widget class="QPushButton" name="btnKeluar"><property name="text"><string>Keluar</string></property></widget></item>
+    </layout>
+   </item>
+
+   <!-- TABLE -->
+   <item>
+    <widget class="QTableWidget" name="tableCV">
+     <property name="rowCount"><number>0</number></property>
+     <property name="columnCount"><number>6</number></property>
+     <column><property name="text"><string>Kode CV</string></property></column>
+     <column><property name="text"><string>Nama CV</string></property></column>
+     <column><property name="text"><string>Alamat CV</string></property></column>
+     <column><property name="text"><string>Modal</string></property></column>
+     <column><property name="text"><string>Tanggal Berdiri</string></property></column>
+     <column><property name="text"><string>Jenis Usaha</string></property></column>
+    </widget>
+   </item>
+
+   <!-- JUMLAH -->
+   <item>
+    <widget class="QLabel" name="lblJumlah">
+     <property name="text">
+      <string>JUMLAH DATA CV : 0</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight</set>
+     </property>
+    </widget>
+   </item>
+
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

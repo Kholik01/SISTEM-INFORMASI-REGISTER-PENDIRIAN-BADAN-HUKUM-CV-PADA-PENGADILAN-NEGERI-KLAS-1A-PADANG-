@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>950</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Data Pemilik</string>
+  </property>
+
+  <!-- ================= STYLE FINAL ================= -->
+  <property name="styleSheet">
+   <string notr="true">
+/* ================= GLOBAL ================= */
+QWidget {
+    background-color: #f2f2f2;
+    font-family: "Segoe UI";
+    color: #000000;
+}
+
+/* ================= LABEL ================= */
+QLabel {
+    color: #000000;
+    font-weight: bold;
+}
+
+/* ================= INPUT ================= */
+QLineEdit, QComboBox {
+    background-color: #ffffff;
+    border: 1px solid #a0a0a0;
+    border-radius: 4px;
+    padding: 4px;
+    color: #000000;
+}
+
+/* ================= BUTTON ================= */
+QPushButton {
+    background-color: #e6e6e6;
+    color: #000000;
+    border: 1px solid #8a8a8a;
+    border-radius: 4px;
+    padding: 6px 14px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #dcdcdc;
+}
+
+QPushButton:pressed {
+    background-color: #cfcfcf;
+}
+
+/* ================= FRAME FORM ================= */
+QFrame#frameForm {
+    background-color: #ffffff;
+    border: 1px solid #b0b0b0;
+    border-radius: 4px;
+}
+
+/* ================= TABLE ================= */
+QTableWidget {
+    background-color: #ffffff;
+    gridline-color: #c0c0c0;
+}
+
+QHeaderView::section {
+    background-color: #e0e0e0;
+    border: 1px solid #b0b0b0;
+    padding: 4px;
+    font-weight: bold;
+}
+   </string>
+  </property>
+
+  <!-- ================= LAYOUT ================= -->
+  <layout class="QVBoxLayout" name="verticalLayout">
+
+   <!-- Header -->
+   <item>
+    <widget class="QLabel" name="lblHeader">
+     <property name="text">
+      <string>APLIKASI SISTEM INFORMASI REGISTER CV
+PENGADILAN NEGERI KELAS 1A PADANG
+BERBASIS JAVA</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignHCenter|Qt::AlignVCenter</set>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+    </widget>
+   </item>
+
+   <!-- Form Input -->
+   <item>
+    <widget class="QFrame" name="frameForm">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #29b330ff;</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="lblID">
+        <property name="text">
+         <string>ID Pemilik:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="txtID"/>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="lblAlamat">
+        <property name="text">
+         <string>Alamat:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QLineEdit" name="txtAlamat"/>
+      </item>
+
+      <item row="1" column="0">
+       <widget class="QLabel" name="lblNama">
+        <property name="text">
+         <string>Nama Pemilik:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="txtNama"/>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLabel" name="lblTelp">
+        <property name="text">
+         <string>No Telepon:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QLineEdit" name="txtTelp"/>
+      </item>
+
+      <item row="2" column="0">
+       <widget class="QLabel" name="lblJK">
+        <property name="text">
+         <string>Jenis Kelamin:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QComboBox" name="cmbJK">
+        <item>
+         <property name="text">
+          <string>L</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>P</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+
+   <!-- Tombol -->
+   <item>
+    <layout class="QHBoxLayout" name="layoutButtons">
+     <item><widget class="QPushButton" name="btnSimpan"><property name="text"><string>&amp;Simpan</string></property></widget></item>
+     <item><widget class="QPushButton" name="btnUbah"><property name="text"><string>&amp;Ubah</string></property></widget></item>
+     <item><widget class="QPushButton" name="btnHapus"><property name="text"><string>&amp;Hapus</string></property></widget></item>
+     <item><widget class="QPushButton" name="btnBersih"><property name="text"><string>&amp;Bersih Teks</string></property></widget></item>
+     <item><widget class="QPushButton" name="btnKeluar"><property name="text"><string>&amp;Keluar</string></property></widget></item>
+    </layout>
+   </item>
+
+   <!-- Tabel Data -->
+   <item>
+    <widget class="QTableWidget" name="tableData">
+     <column><property name="text"><string>Kode Pemilik</string></property></column>
+     <column><property name="text"><string>Nama Pemilik</string></property></column>
+     <column><property name="text"><string>Jenis Kelamin</string></property></column>
+     <column><property name="text"><string>Alamat Pemilik</string></property></column>
+     <column><property name="text"><string>No Telepon</string></property></column>
+    </widget>
+   </item>
+
+   <!-- Jumlah Data -->
+   <item>
+    <layout class="QHBoxLayout" name="layoutJumlah">
+     <item>
+      <widget class="QLabel" name="lblJumlah">
+       <property name="text">
+        <string>Jumlah Data Pemilik:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="txtJumlah">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
